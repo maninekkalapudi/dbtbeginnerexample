@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: jaffle_shop
-    database: dbttest
-    # schema: dbttest
+    schema: dbttest
     tables:
-      - name: customers
-      - name: orders
+      - name: jaffle_shop_customers
+      - name: jaffle_shop_orders
+      - name: stripe_payments
