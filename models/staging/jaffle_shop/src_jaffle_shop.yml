@@ -5,5 +5,17 @@ sources:
     schema: dbttest
     tables:
       - name: jaffle_shop_customers
+        loaded_at_field: elt_load_dt
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
       - name: jaffle_shop_orders
+        loaded_at_field: elt_load_dt
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
       - name: stripe_payments
+        loaded_at_field: elt_load_dt
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
